@@ -1,0 +1,28 @@
+/* globals.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+/* Other global styles can go here */
+
+
+
+/* Apply scrollbar styles to a specific element (e.g., a wrapper div) */
+.wrapper {
+  /* For WebKit browsers (Chrome, Safari) */
+  ::-webkit-scrollbar {
+    width: 8px; /* Set the width of the scroll bar */
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: yellow; /* Set the color of the thumb (handle) */
+    border-radius: 4px; /* Optional: Set border-radius for a rounded thumb */
+  }
+
+  /* For Firefox */
+  /* Note: Firefox doesn't support setting the width directly, so use the scrollbar-color property */
+  /* The first color is the thumb color, and the second color is the track (background) color */
+  scrollbar-color: yellow transparent;
+
+  /* Optional: Set a width for the thumb in Firefox */
+  scrollbar-width: thin;
+}

@@ -3,7 +3,7 @@ import Link from "next/link"
 const Login = () => {
 	return (
 
-            <main class="m-auto xl:container px-12 sm:px-0 mx-auto dark:bg-gray-800">
+            <main class="m-auto xl:container px-12 sm:px-0 mx-auto dark:bg-gray-900">
 			  <div class="mx-auto h-full sm:w-max">
 			    <div class="m-auto  py-12">
 			    <div class="mt-12 rounded-3xl  bg-gray-50 dark:bg-gray-800 -mx-6 sm:-mx-10 p-8 sm:p-10">
@@ -69,13 +69,7 @@ const Login = () => {
 			      </form>
 			      <p className="text-sm py-4 text-[#636262] dark:text-gray-400">Don't have an account? <Link href="sign-up" className="font-[Montserrat,_sans-serif] text-sm font-bold text-black dark:text-white">create one now !</Link></p>
 			    </div>
-			      <div class="border-t pt-12 text-gray-500 dark:border-gray-800">
-			        <div class="space-x-4 text-center">
-			          <span>&copy; Tailus</span>
-			          <Link href="#" class="text-sm hover:text-sky-900 dark:hover:text-gray-300">Contact</Link>
-			          <Link href="#" class="text-sm hover:text-sky-900 dark:hover:text-gray-300">Privacy & Terms</Link>
-			        </div>
-			      </div>
+			      
 			    </div>
 			  </div>
 			</main>

@@ -6,7 +6,7 @@ import ThemeSwithcher from "./ThemeSwitcher";
 import InnerButton from "./button/InnerCTA.jsx";
 import { useState,useEffect } from 'react';
 import Link from "next/link";
-
+import Secondary from "./button/AltCTA.jsx"
 import { CategoryLink, SubCategoryLink } from './CategoryLink.jsx';
 
 
@@ -87,12 +87,12 @@ const PNavbar = () => {
 		       <div className={`mt-14 flex flex-col space-y-8 lg:mt-0 lg:flex lg:flex-row lg:space-x-1 lg:space-y-0 ${isOpen ? 'show' : 'hidden'}`}>
 		          {/* DROPDOWN */}
 		          <div className="relative flex flex-col">
-		            <Link href="#" className={`flex flex-row rounded-lg lg:px-6 lg:py-4 lg:hover:bg-gray-50 lg:hover:text-gray-800 ${menuOne ? 'text-gray-800 lg:border lg:border-gray-600 lg:bg-gray-50' : 'text-black lg:border lg:border-white'}`} onClick={showDropdown}>
-				      Component
+		            <button className={`flex flex-row rounded-lg lg:px-6 lg:py-4 hover:text-yellow-500  dark:border-0 dark:hover:yellow-500 ${menuOne ? 'text-yellow-500 lg:border lg:border-yellow-600 lg:bg-gray-50 dark:text-yellow-500 dark:border-yellow-600 dark:bg-gray-800 ' : 'hover:text-yellow-500 lg:border lg:border-white'}`} onClick={showDropdown}>
+				      Products
 				      <svg className={`fill-current transition ${menuOne ? 'rotate-180' : 'rotate-0'}`} style={{ width: '24px', height: '24px' }} viewBox="0 0 24 24">
 				        <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"></path>
 				      </svg>
-				    </Link>
+				    </button>
 		            {/* DROP DOWN MENU ONE */}
 		            
 		             <div
@@ -105,30 +105,36 @@ const PNavbar = () => {
 				    </div>
 
 		          </div>
-		          <Link href="#" className="font-inter rounded-lg lg:px-6 lg:py-4 lg:hover:bg-gray-50 lg:hover:text-gray-800">Templates</Link>
-		          <Link href="#" className="font-inter rounded-lg lg:px-6 lg:py-4 lg:hover:bg-gray-50 lg:hover:text-gray-800">Pricing</Link>
-		          <Link href="#" className="font-inter lg: rounded-lg pb-8 lg:px-6 lg:py-4 lg:hover:bg-gray-50 lg:hover:text-gray-800">FAQs</Link>
-		          
+		          <Link href="/categories" className="font-inter rounded-lg lg:px-6 lg:py-4 hover:text-yellow-500">Categories</Link>
+		          <Link href="/services" className="font-inter rounded-lg lg:px-6 lg:py-4 hover:text-yellow-500">Services</Link>
+		          <Link href="/blog" className="font-inter rounded-lg lg:px-6 lg:py-4 hover:text-yellow-500">Blog</Link>
+		          <Link href="/faqs" className="font-inter lg: rounded-lg pb-8 lg:px-6 lg:py-4 hover:text-yellow-500">FAQs</Link>
+		         
 		          <ThemeSwithcher  />
 		                                
 		        </div>
 		        {/* MENU CONTENT 2 */}
 		        <div className={`flex flex-col space-y-8 lg:flex lg:flex-row lg:space-x-3 lg:space-y-0 ${isOpen ? 'show' : 'hidden'}`}>
-		          <Link href="#" className="font-inter rounded-lg lg:px-6 lg:py-4 lg:hover:bg-gray-50 lg:hover:text-gray-800">Sign Up</Link>
+		           <button>		          	
+		          	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-6 h-6 font-bold">
+								  <path fillRule="evenodd" d="M9 3.5a5.5 5.5 0 100 11 5.5 5.5 0 000-11zM2 9a7 7 0 1112.452 4.391l3.328 3.329a.75.75 0 11-1.06 1.06l-3.329-3.328A7 7 0 012 9z" clipRule="evenodd" />
+								</svg>
+
+		          </button>
+		          <Link href="sign-up" className="font-inter rounded-lg lg:px-6 lg:py-4 hover:text-yellow-500">Sign Up</Link>
 		          <InnerButton text="login" link="/login"/>
 		        </div>
 		        {/* BURGER MENU */}
 		          <Link href="#" className="absolute dark:font-white right-5 lg:hidden" onClick={handleClick}>
 				      {
 
-				      	isOpen ? (<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-6 dark:font-white h-6">
+				      	isOpen ? (<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-6 dark:text-white h-6">
   <path d="M6.28 5.22a.75.75 0 00-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 101.06 1.06L10 11.06l3.72 3.72a.75.75 0 101.06-1.06L11.06 10l3.72-3.72a.75.75 0 00-1.06-1.06L10 8.94 6.28 5.22z" />
 </svg>
-) :(				      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" >
-				        <path d="M3.75 12H20.25" stroke="#160042" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="dark:font-white"></path>
-				        <path d="M3.75 6H20.25" stroke="#160042" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="dark:bg-white"></path>
-				        <path d="M3.75 18H20.25" stroke="#160042" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"></path>
-				      </svg>
+) :(				      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
+  <path fillRule="evenodd" d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm8.25 5.25a.75.75 0 01.75-.75h8.25a.75.75 0 010 1.5H12a.75.75 0 01-.75-.75z" clipRule="evenodd" />
+</svg>
+
 ) 
 				      }
 
@@ -214,7 +220,7 @@ const Navbar = () => {
 		                            </ul>
 		                        </div>
 
-		                        <div class="w-full gap-y-4 md:w-max md:gap-y-0 md:gap-x-4 flex md:flex-row flex-col">
+		                        <div class="w-full gap-y-4 md:w-max md:gap-y-0 md:gap-x-4 flex md:flex-row flex-col pt-6">
 		                            <button type="button" title="Start buying" class="group w-full py-3 px-6 text-center transition dark:active:bg-yellow-800 dark:focus:bg-yellow-900 active:bg-yellow-200 focus:bg-yellow-100 sm:w-max">
 		                                <span class="block text-gray-700 dark:text-gray-300 font-semibold group-focus:text-yellow-700 dark:group-focus:text-yellow-100">
 		                                    Login

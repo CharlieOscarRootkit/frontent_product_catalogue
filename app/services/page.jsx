@@ -5,6 +5,7 @@ import {CTATwo} from "../components/CTA.jsx"
 import Link from "next/link"
 import Image from "next/image"
 import  Button from "../components/button/InnerCTA.jsx"
+
 export default function Pages(){
 	return (
 		
@@ -22,7 +23,7 @@ export default function Pages(){
 const ServiceCard = ({image}) => {
 	return (
 
-		  <Link href="#" className="flex flex-col gap-4 rounded-2xl border border-solid border-[#b1b1b1] bg-[#f5f8ff] p-6 font-bold text-black transition hover:[box-shadow:rgba(236,_201,_75,_1)_7px_7px]">
+		  <Link href="#" className="flex flex-col gap-4 w-[320px] h-auto rounded-2xl border border-solid border-[#b1b1b1] bg-[#f5f8ff] p-6 font-bold text-black transition hover:[box-shadow:rgba(236,_201,_75,_1)_7px_7px]">
               <img src={image} alt="" className="inline-block h-60 w-full object-cover" />
               <div className="w-full pt-4">
                 <p className="mb-4 text-xs font-semibold uppercase text-[#636262] h-[6px] w-1/2 bg-yellow-500"></p>
@@ -30,7 +31,7 @@ const ServiceCard = ({image}) => {
                 <p className="mb-5 font-normal text-[#636262] text-md lg:mb-8">Lorem ipsum dolor sit amet, &nbsp;elit ut aliquam, purus sit amet luctus venenatis elit ut aliquam, purus sit amet luctus venenatis</p>
                 
                   <div className="flex flex-col items-center">
-                    <div className="flex w-[50%]">
+                    <div className="flex inline-block">
                       <Button text={"LEARN MORE"} link={"more"}/>
                     </div>
                   </div>

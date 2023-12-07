@@ -1,177 +1,102 @@
+
 import Link from 'next/link';
-
 const Grid = () => {
+  const Category = [
+    {
+      title:"",
+      image:"https://source.unsplash.com/Nllx4R-2c3o"
+    },
+    {
+      title:"",
+      image:"https://source.unsplash.com/wfalq01jJuU"
+    },
+    {
+      title:"",
+      image:"https://source.unsplash.com/rMHNK_skwwU"
+    },
+      {
+      title:"",
+      image:"https://source.unsplash.com/WBMjuGpbrCQ"
+    },
+     {
+      title:"",
+      image:"https://source.unsplash.com/lp40q07DIe0"
+    },
+    {
+      title:"",
+      image:"https://images.unsplash.com/photo-1698434156086-918aa526b531"
+    },
+      {
+      title:"",
+      image:"https://source.unsplash.com/nCUZ5BYBL_o"
+    },
+    ]
   return (
-    <section className="p-5 sm:p-8">
-      <div class="columns-1 gap-5 sm:columns-2 sm:gap-8 md:columns-3 lg:columns-4 [&>img:not(:first-child)]:mt-8 text-gray-700">
-        <Link href="/" className="inline-flex relative group">
-          <div class="absolute invisible opacity-0 transition-opacity ease-in-out duration-1000 group-hover:visible opacity-100 inset-0 overflow-hidden backdrop-filter backdrop-blur-sm flex flex-col items-center justify-center">
-          <h2 className="text-xl text-gray-700 dark:text-blue-500 font-bold">
-              Air Force
-          </h2>
-          <p className="mb-1 text-xs font-medium text-blue-500  uppercase">
-          ----------
-          </p>
-          <Button />
-          </div>
-          <img src="https://source.unsplash.com/Nllx4R-2c3o"/>
-        </Link>
-        <Link href="/" className="inline-flex relative group">
-          <div class="absolute invisible opacity-0 transition-opacity ease-in-out duration-700 group-hover:visible opacity-100 inset-0 overflow-hidden backdrop-filter backdrop-blur-sm flex flex-col items-center justify-center">
-          <h2 className="text-xl text-gray-700 dark:text-blue-500 font-bold">
-              Air Force
-          </h2>
-          <p className="mb-1 text-xs font-medium text-blue-500  uppercase">
-          ----------
-          </p>
-          <Button />
-          </div>
-          <img src="https://images.unsplash.com/photo-1698434156086-918aa526b531"/>
-        </Link>  
-        
-        <Link href="/" className="inline-flex relative group">
-          <div class="absolute invisible opacity-0 transition-opacity ease-in-out duration-700 group-hover:visible opacity-100 inset-0 overflow-hidden backdrop-filter backdrop-blur-sm flex flex-col items-center justify-center">
-          <h2 className="text-xl text-gray-700 dark:text-blue-500 font-bold">
-              Air Force
-          </h2>
-          <p className="mb-1 text-xs font-medium text-blue-500  uppercase">
-          ----------
-          </p>
-          <Button />
-          </div>
-          <img src="https://source.unsplash.com/lp40q07DIe0"/>
-        </Link>  
-        
-        <Link href="/" className="inline-flex relative group">
-          <div class="absolute invisible opacity-0 transition-opacity ease-in-out duration-700 group-hover:visible opacity-100 inset-0 overflow-hidden backdrop-filter backdrop-blur-sm flex flex-col items-center justify-center">
-          <h2 className="text-xl text-gray-700 dark:text-blue-500 font-bold">
-              Air Force
-          </h2>
-          <p className="mb-1 text-xs font-medium text-blue-500  uppercase">
-          ----------
-          </p>
-          <Button />
-          </div>
-          <img src="https://source.unsplash.com/wfalq01jJuU"/>
-        </Link>  
-        
-        <Link href="/" className="inline-flex relative group">
-          <div class="absolute invisible opacity-0 transition-opacity ease-in-out duration-700 group-hover:visible opacity-100 inset-0 overflow-hidden backdrop-filter backdrop-blur-sm flex items-center flex-col justify-center">
-          <h2 className="text-xl text-gray-700 dark:text-blue-500 font-bold">
-              Air Force
-          </h2>
-          <p className="mb-1 text-xs font-medium text-blue-500  uppercase">
-          ----------
-          </p>
-          <Button />
-          </div>
-          <img src="https://source.unsplash.com/rMHNK_skwwU"/>
-        </Link>    
-        
-        <Link href="/" className="inline-flex relative group">
-          <div class="absolute invisible opacity-0 transition-opacity ease-in-out duration-700 group-hover:visible opacity-100 inset-0 overflow-hidden backdrop-filter backdrop-blur-sm flex items-center justify-center flex-col">
-          <h2 className="text-xl text-gray-700 dark:text-blue-500 font-bold">
-              Air Force
-          </h2>
-          <p className="mb-1 text-xs font-medium text-blue-500  uppercase">
-          ----------
-          </p>
-          <Button />
-          </div>
-          <img src="https://source.unsplash.com/WBMjuGpbrCQ"/>
-        </Link>  
+    <section className="p-5 sm:p-8 flex justify-center align-center inline-flex">
 
-        <Link href="/" className="inline-flex relative group">
-          <div class="absolute invisible opacity-0 transition-opacity ease-in-out duration-700 group-hover:visible opacity-100 inset-0 overflow-hidden backdrop-filter backdrop-blur-sm flex flex-col items-center justify-center">
-          <h2 className="text-xl text-gray-700 dark:text-blue-500 font-bold">
-              Air Force
-          </h2>
-          <p className="mb-1 text-xs font-medium text-blue-500  uppercase">
-          ----------
-          </p>
-          <Button />
-          </div>
-          <img src="https://source.unsplash.com/nCUZ5BYBL_o"/>
-        </Link>  
-{/*
-        <Link href="/" className="inline-flex relative group">
-          <div class="absolute invisible opacity-0 transition-opacity ease-in-out duration-700 group-hover:visible opacity-100 inset-0 overflow-hidden backdrop-filter backdrop-blur-sm flex items-center justify-center">
-          <Button />
-          </div>
-          <img src="https://source.unsplash.com/3u4fzMQZhjc"/>
-        </Link>  
 
-        <Link href="/" className="inline-flex relative group">
-          <div class="absolute invisible opacity-0 transition-opacity ease-in-out duration-700 group-hover:visible opacity-100 inset-0 overflow-hidden backdrop-filter backdrop-blur-sm flex items-center justify-center">
-          <Button />
-          </div>
-          <img src="https://source.unsplash.com/haOIqIPSwps"/>
-        </Link>  
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3  gap-4 mt-8 text-gray-700">
 
-        <Link href="/" className="inline-flex relative group">
-          <div class="absolute invisible opacity-0 transition-opacity ease-in-out duration-700 group-hover:visible opacity-100 inset-0 overflow-hidden backdrop-filter backdrop-blur-sm flex items-center justify-center">
-          <Button />
-          </div>
-          <img src="https://source.unsplash.com/3UrYD7NNVxk"/>
-        </Link>  
+      {
+        Category.map((item, idx) => (
+          <CategoryCard image={item.image} title={item.title} key={idx} />
+        ))
+      }
 
-        <Link href="/" className="inline-flex relative group">
-          <div class="absolute invisible opacity-0 transition-opacity ease-in-out duration-700 group-hover:visible opacity-100 inset-0 overflow-hidden backdrop-filter backdrop-blur-sm flex items-center justify-center">
-          <Button />
-          </div>
-          <img src="https://source.unsplash.com/fm1JKDItlVM"/>
-        </Link>  
+    </div>
 
-        <Link href="/" className="inline-flex relative group">
-          <div class="absolute invisible opacity-0 transition-opacity ease-in-out duration-700 group-hover:visible opacity-100 inset-0 overflow-hidden backdrop-filter backdrop-blur-sm flex items-center justify-center">
-          <Button />
-          </div>
-          <img src="https://source.unsplash.com/qPpq1EVs8vw"/>
-        </Link>  
-
-        <Link href="/" className="inline-flex relative group">
-          <div class="absolute invisible opacity-0 transition-opacity ease-in-out duration-700 group-hover:visible opacity-100 inset-0 overflow-hidden backdrop-filter backdrop-blur-sm flex items-center justify-center">
-          <Button />
-          </div>
-          <img src="https://source.unsplash.com/xRyL63AwZFE"/>
-        </Link>  
-
-        <Link href="/" className="inline-flex relative group">
-          <div class="absolute invisible opacity-0 transition-opacity ease-in-out duration-700 group-hover:visible opacity-100 inset-0 overflow-hidden backdrop-filter backdrop-blur-sm flex items-center justify-center">
-          <Button />
-          </div>
-          <img src="https://source.unsplash.com/XeNKWTiCPNw"/>
-        </Link>  
-
-        <Link href="/" className="inline-flex relative group">
-          <div class="absolute invisible opacity-0 transition-opacity ease-in-out duration-700 group-hover:visible opacity-100 inset-0 overflow-hidden backdrop-filter backdrop-blur-sm flex items-center justify-center">
-          <Button />
-          </div>
-          <img src="https://source.unsplash.com/DFt3T5r_4FE"/>
-        </Link>  
-
-        <Link href="/" className="inline-flex relative group">
-          <div class="absolute invisible opacity-0 transition-opacity ease-in-out duration-700 group-hover:visible opacity-100 inset-0 overflow-hidden backdrop-filter backdrop-blur-sm flex items-center justify-center">
-          <Button />
-          </div>
-          <img src="https://source.unsplash.com/Ebwp2-6BG8E"/>
-        </Link>  */}
-      </div>
     </section>
   );
 };
 
-
-const Button = () => {
-
+const CategoryCard = ({image,title,link,}) => {
+// transform translate-y-[100%] group-hover:translate-y-[0%] duration-500
   return (
-    <button type="button" class="transition duration-200 bg-blue-500 hover:bg-blue-600 focus:bg-blue-700 focus:shadow-sm focus:ring-4 focus:ring-blue-500 focus:ring-opacity-50 text-white w-1/2 py-2.5 rounded-lg text-sm shadow-sm hover:shadow-md font-semibold text-center inline-block">
-            <span class="inline-block mr-2">Login</span>
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="animate-bounce w-4 h-4 inline-block ">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
-    </button>
-    )
+           <div className="inline-flex relative group overflow-hidden h-[300px]">
+                <div className="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-10 dark:bg-opacity-0 group-hover:bg-black group-hover:bg-opacity-70 transition-all duration-300">
+                  <div className="relative  w-full h-full  bg-black bg-opacity-10 p-4">
+                      
+                      <div className="absolute top-[10%] max-w-[70%] flex flex-col gap-3 inline-block">
+                        <h2 className="  text-xl font-bold text-gray-900  font-bold roup-hover:text-white w-full">
+                            {title || "GIRL"}
+                          </h2>  
+                          <hr class="border-t-8 border-yellow-500 relative bottom-2 w-[20%] group-hover:w-[10%] duration-300"/>
+
+
+                        <p className="description transform translate-x-[-110%] group-hover:translate-x-[0] duration-300 text-white">
+                            lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                        </p>
+                      </div>  
+                      
+                      <div className="absolute inline-block bottom-0 right-0 min-w-[30%] transform translate-y-[100%] group-hover:translate-y-[0] duration-300 p-2 m-2">
+                          <Button link={link || "cate"} text="Discover"/>
+                          
+                      </div>
+                                      {/* Additional content or Button goes here */}
+                  </div>
+                  
+                </div>
+                <img
+                  src={image}
+                  className="w-full h-full object-cover"
+                  alt="Your Image"
+                />
+              </div>
+        )
 }
 
+
+const Button = ({ link, text }) => {
+  return (
+    
+    <Link href={text} className="mr-5 group  inline-block flex items-center bg-yellow-500 px-8 py-4 font-semibold text-white transition [box-shadow:rgb(_255,_230,191)-8px_8px] hover:[box-shadow:rgb(255,_255,_191)_0px_0px] md:mr-6 lg:mr-8">
+              <p className="mr-6 font-bold inline-block">{text}</p>
+              <svg fill="currentColor" viewBox="0 0 20 21" xmlns="http://www.w3.org/2000/svg" className="flex-none w-5 h-5 block relative top-[2px] transition group-hover:left-[5px] duration-500 ease-in-out">
+             
+                <polygon points="16.172 9 10.101 2.929 11.515 1.515 20 10 19.293 10.707 11.515 18.485 10.101 17.071 16.172 11 0 11 0 9"></polygon>
+              </svg>
+            </Link>
+  );
+  
+}
 export default Grid;

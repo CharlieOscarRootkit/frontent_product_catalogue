@@ -26,7 +26,16 @@ const SignUpComponent = () => {
           <form className="mx-auto mb-4 max-w-sm pb-4" name="wf-form-password" method="get">
             <div className="relative">
               <img alt="" src="https://assets.website-files.com/6357722e2a5f19121d37f84d/6357722e2a5f190b7e37f878_EnvelopeSimple.svg" className="absolute bottom-0 left-[5%] right-auto top-[26%] inline-block" />
-              <input type="email" className="mb-4 block h-9 w-full border border-black bg-white dark:bg-gray-900 px-3 py-6 pl-14 text-sm text-[#333333] dark:text-gray-400" maxLength="256" name="name" placeholder="johndeo@gmail.com" required />
+              <input
+                type="email"
+                className="mb-4 block h-9 w-full border border-black bg-white dark:bg-gray-900 px-3 py-6 pl-14 text-sm text-[#333333] dark:text-gray-400 focus:border-yellow-500"
+                maxLength="256"
+                id="email"
+                name="name"
+                placeholder="johndeo@gmail.com"
+                required
+              />
+
             </div>
             <div className="relative mb-4 pb-2">
               <img alt="" src="https://assets.website-files.com/6357722e2a5f19121d37f84d/6357722e2a5f19601037f879_Lock-2.svg" className="absolute bottom-0 left-[5%] right-auto top-[26%] inline-block" />

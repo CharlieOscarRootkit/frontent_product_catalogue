@@ -1,38 +1,30 @@
 "use client"
 import React from 'react';
 
-
-const ModalComponent = () => {
+const Search = () => {
   return (
-    <>
-      {/* This is the background that overlays when the modal is active. It has opacity, and that's why the background looks gray. */}
-      <div className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" aria-hidden="true"></div>
-      <span className="hidden sm:inline-block sm:align-middle sm:" aria-hidden="true">​</span>
-      {/* Modal panel: This is where you put the pop-up's content, the div on top this comment is the wrapper */}
-
-      <div className="inline-block overflow-hidden  align-bottom transition-all transform bg-white rounded-lg shadow-2xl lg:p-16 sm:my-8 sm:align-middle sm:max-w-xl sm:w-full">
-      
-       <form class="flex flex-col md:flex-row gap-2 justify:center">
-          	    <div class="flex">
-          	        <input type="text" placeholder="Search for the tool you like"
-          				class="w-full md:w-80 px-3 h-10 rounded-l border-2 border-sky-500 focus:outline-none focus:border-sky-500"
-          				/>
-          	        <button type="submit" class="bg-sky-500 text-white rounded-r px-2 md:px-3 py-0 md:py-1"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
-          </svg>
-          </button>
-          	    </div>
-          	 <select id='pricingType' name='pricingType' class='inline-block max-w-min h-10 border-2 border-sky-500 focus:outline-none focus:border-sky-500 text-sky-500 rounded px-2 md:px-3 py-0 md:py-1 tracking-wider'>
-              <option value='All' selected>All</option>
-              <option value='Freemium'>Freemium</option>
-              <option value='Free'>Free</option>
-              <option value='Paid'>Paid</option>
-            </select>
-    	</form>
-        
+    <section className="relative h-screen bg-[#cccccc] md:h-screen">
+      {/* Container */}
+      <div className="absolute left-1/2 top-1/2 w-[90%] max-w-[900px] -translate-x-1/2 -translate-y-1/2 bg-white md:h-96 lg:w-full">
+        {/* Content */}
+        <div className="grid h-full md:grid-cols-[0.5fr_1fr]">
+          {/* Image */}
+          <img src="https://assets.website-files.com/6458c625291a94a195e6cf3a/6458c625291a942fd2e6cfa2_Rectangle%201%20(2).svg" alt="" className="inline-block h-full max-h-60 w-full object-cover md:max-h-full" />
+          <div className="flex flex-col justify-center px-6 py-12 sm:pl-12 sm:pr-20 md:py-16">
+            {/* Title */}
+            <h3 className="mb-2 text-2xl font-bold md:text-3xl">Newsletter Signup</h3>
+            <p className="mb-6 text-sm text-[#636262] sm:text-base lg:mb-8">Egestas consectetur a cras aliquam tincidunt tellus quam. Quis faucibus tincidunt etiam sed</p>
+            {/* Form */}
+            <form name="email-form" method="get" className="relative mb-4 max-w-full">
+              <input type="email" className="block h-9 w-full rounded-md border border-solid border-black px-3 py-6 text-sm text-[#333333]" placeholder="Enter your email" required="" />
+              <input type="submit" value="Subscribe" className="relative top-[5px] w-full cursor-pointer rounded-md bg-black px-6 py-2 font-semibold text-white sm:absolute sm:right-1 sm:w-36" />
+            </form>
+            <p className="text-sm text-[#636262]">Zero spam. Only quality pixels.</p>
+          </div>
+        </div>
       </div>
-    </>
+    </section>
   );
 };
 
-export default ModalComponent;
+export default Search;

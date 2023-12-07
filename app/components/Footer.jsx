@@ -22,7 +22,7 @@ const Footer = () => {
               >
                 <img src="https://tailus.io/sources/blocks/company-website/preview/images/logo.svg" alt="logo tailus" width="100" height="42" class="w-32 dark:brightness-200 dark:grayscale" />
                 <div class="flex gap-6">
-                  <Link href="#" target="blank" aria-label="github" class="hover:text-cyan-600">
+                  <Link href="#" target="blank" aria-label="github" class="hover:text-yellow-600">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="20"
@@ -36,7 +36,7 @@ const Footer = () => {
                       />
                     </svg>
                   </Link>
-                  <Link href="#" target="blank" aria-label="twitter" class="hover:text-cyan-600">
+                  <Link href="#" target="blank" aria-label="twitter" class="hover:text-yellow-600">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="20"
@@ -50,7 +50,7 @@ const Footer = () => {
                       />
                     </svg>
                   </Link>
-                  <Link href="#" target="blank" aria-label="medium" class="hover:text-cyan-600">
+                  <Link href="#" target="blank" aria-label="medium" class="hover:text-yellow-600">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="20"
@@ -73,19 +73,19 @@ const Footer = () => {
                   <h6 class="text-lg font-medium text-gray-800 dark:text-gray-200">Company</h6>
                   <ul class="mt-4 list-inside space-y-4">
                     <li>
-                      <Link href="#" class="transition hover:text-cyan-600">About</Link>
+                      <Link href="#" class="transition hover:text-yellow-600">About</Link>
                     </li>
                     <li>
-                      <Link href="#" class="transition hover:text-cyan-600">Customers</Link>
+                      <Link href="#" class="transition hover:text-yellow-600">Customers</Link>
                     </li>
                     <li>
-                      <Link href="#" class="transition hover:text-cyan-600">Enterprise</Link>
+                      <Link href="#" class="transition hover:text-yellow-600">Enterprise</Link>
                     </li>
                     <li>
-                      <Link href="#" class="transition hover:text-cyan-600">Partners</Link>
+                      <Link href="#" class="transition hover:text-yellow-600">Partners</Link>
                     </li>
                     <li>
-                      <Link href="#" class="transition hover:text-cyan-600">Jobs</Link>
+                      <Link href="#" class="transition hover:text-yellow-600">Jobs</Link>
                     </li>
                   </ul>
                 </div>
@@ -93,19 +93,19 @@ const Footer = () => {
                   <h6 class="text-lg font-medium text-gray-800 dark:text-gray-200">Products</h6>
                   <ul class="mt-4 list-inside space-y-4">
                     <li>
-                      <Link href="#" class="transition hover:text-cyan-600">About</Link>
+                      <Link href="#" class="transition hover:text-yellow-600">About</Link>
                     </li>
                     <li>
-                      <Link href="#" class="transition hover:text-cyan-600">Customers</Link>
+                      <Link href="#" class="transition hover:text-yellow-600">Customers</Link>
                     </li>
                     <li>
-                      <Link href="#" class="transition hover:text-cyan-600">Enterprise</Link>
+                      <Link href="#" class="transition hover:text-yellow-600">Enterprise</Link>
                     </li>
                     <li>
-                      <Link href="#" class="transition hover:text-cyan-600">Partners</Link>
+                      <Link href="#" class="transition hover:text-yellow-600">Partners</Link>
                     </li>
                     <li>
-                      <Link href="#" class="transition hover:text-cyan-600">Jobs</Link>
+                      <Link href="#" class="transition hover:text-yellow-600">Jobs</Link>
                     </li>
                   </ul>
                 </div>
@@ -113,19 +113,19 @@ const Footer = () => {
                   <h6 class="text-lg font-medium text-gray-800 dark:text-gray-200">Ressources</h6>
                   <ul class="mt-4 list-inside space-y-4">
                     <li>
-                      <Link href="#" class="transition hover:text-cyan-600">About</Link>
+                      <Link href="#" class="transition hover:text-yellow-600">About</Link>
                     </li>
                     <li>
-                      <Link href="#" class="transition hover:text-cyan-600">Customers</Link>
+                      <Link href="#" class="transition hover:text-yellow-600">Customers</Link>
                     </li>
                     <li>
-                      <Link href="#" class="transition hover:text-cyan-600">Enterprise</Link>
+                      <Link href="#" class="transition hover:text-yellow-600">Enterprise</Link>
                     </li>
                     <li>
-                      <Link href="#" class="transition hover:text-cyan-600">Partners</Link>
+                      <Link href="#" class="transition hover:text-yellow-600">Partners</Link>
                     </li>
                     <li>
-                      <Link href="#" class="transition hover:text-cyan-600">Jobs</Link>
+                      <Link href="#" class="transition hover:text-yellow-600">Jobs</Link>
                     </li>
                   </ul>
                 </div>

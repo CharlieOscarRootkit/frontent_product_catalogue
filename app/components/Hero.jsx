@@ -1,6 +1,7 @@
 import Link from 'next/link';
-import InnerButton from "./button/InnerCTA.jsx"
+
 import AltButton from "./button/AltCTA.jsx"
+import Button from "./button/InnerCTA.jsx";
 
 const HeroSection = () => {
 	return (
@@ -22,7 +23,7 @@ const HeroSection = () => {
                                 <p class="text-xl text-gray-700 dark:text-gray-300">Booking Company-Wide Savings, Invoicing and reporting docs.</p>
                                 
                                 <div class="flex space-x-4">
-                                    <InnerButton text="Browse Collection" link="/collections"/>
+                                    <Button text="Browse Collection" link="/collections"/>
                                 </div>
                             </div>
 
@@ -40,6 +41,18 @@ const HeroSection = () => {
             
 		)
 }
+
+// const But = ({text}) => {
+//     return( 
+//                <button className="mr-5 group  inline-block flex items-center bg-yellow-500 px-8 py-4 font-semibold text-white transition [box-shadow:rgb(_255,_230,191)-8px_8px] hover:[box-shadow:rgb(255,_255,_191)_0px_0px] md:mr-6 lg:mr-8">
+//               <p className="mr-6 font-bold inline-block">{text}</p>
+//               <svg fill="currentColor" viewBox="0 0 20 21" xmlns="http://www.w3.org/2000/svg" className="flex-none w-5 h-5 block relative top-[2px] transition group-hover:left-[5px] duration-500 ease-in-out">
+             
+//                 <polygon points="16.172 9 10.101 2.929 11.515 1.515 20 10 19.293 10.707 11.515 18.485 10.101 17.071 16.172 11 0 11 0 9"></polygon>
+//               </svg>
+//             </button>
+//         )
+// }
 
 const CategoryHero = () => {
 
@@ -80,12 +93,7 @@ const CategoryHero = () => {
                         <p class="text-gray-700 dark:text-gray-300">Sit amet consectetur adipisicing elit. eligendi tenetur nihil
                             quaerat suscipit, sunt dignissimos.</p>
                         <div class="flex space-x-4 mt-6">
-                            <button type="button" title="Start buying"
-                                class="w-full py-3 px-6 text-center rounded-full transition duration-300 bg-gray-900 dark:bg-gray-700 hover:bg-cyan-500 active:bg-cyan-600 focus:bg-cyan-800 sm:w-max">
-                                <span class="block text-white text-sm">
-                                    Shop now
-                                </span>
-                            </button>
+                            < Button text="Shop now" link="/product/dff"/>
                             <button type="button" title="Start buying"
                                 class="w-full py-3 px-6 text-center rounded-full transition border border-gray-200 dark:border-gray-700 sm:w-max">
                                 <span class="block text-gray-800 text-sm dark:text-white">
@@ -128,7 +136,7 @@ const ProductTypeHero = () => {
             <p class="mb-6 max-w-[528px] text-xl text-[#636262] md:mb-10 lg:mb-12">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus</p>
 
 
-            <InnerButton text="Discover More" link="/categories/sheos"/>
+            <Button text="Discover More" link="/categories/sheos"/>
 
           </div>
           
@@ -201,42 +209,24 @@ const ProductTypeHero = () => {
 
 const HeroSectionTwo = () => {
   return (
-    <div className="flex flex-wrap">
-      <div className="w-full sm:w-8/12 mb-10">
-        <div className="container mx-auto h-full sm:p-10">
-          <nav className="flex px-4 justify-between items-center">
-            <div className="text-4xl font-bold">
-              Plant<span className="text-green-700">.</span>
-            </div>
-            <div>
-              <img src="https://image.flaticon.com/icons/svg/497/497348.svg" alt="" className="w-8" />
-            </div>
-          </nav>
-          <header className="container px-4 lg:flex mt-10 items-center h-full lg:mt-0">
-            <div className="w-full">
-              <h1 className="text-4xl lg:text-6xl font-bold">
-                Find your <span className="text-green-700">greeny</span> stuff for your room
-              </h1>
-              <div className="w-20 h-2 bg-green-700 my-4"></div>
-              <p className="text-xl mb-10">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae maiores neque eaque ea odit
-                placeat, tenetur illum distinctio nulla voluptatum a corrupti beatae tempora aperiam quia id
-                aliquam possimus aut.
-              </p>
-              <Link href="#" className="bg-green-500 text-white text-2xl font-medium px-4 py-2 rounded shadow">
-                  Learn More
-                
-              </Link>
-            </div>
-          </header>
+    <header>
+      {/* Hero Container */}
+      <div className="mx-auto max-w-7xl px-5 py-16 md:px-10 md:py-24 lg:py-32">
+        {/* Component */}
+        <div className="mx-auto mb-8 w-full max-w-3xl text-center md:mb-12 lg:mb-16">
+          {/* Hero Title */}
+          <h1 className="mb-4 text-4xl font-bold md:text-6xl"> The Website You Want Without The Dev Time. </h1>
+          <p className="mx-auto mb-6 max-w-lg text-base text-[#636262] md:mb-10 lg:mb-12"> Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus </p>
+          {/* Hero Button */}
+          <div className="flex items-center justify-center">
+            <Button text="Contact Us" link="contact-us"/>
+            
+          </div>
         </div>
+        {/* Hero Image */}
+        <img src="https://images.pexels.com/photos/37543/firefighters-training-live-fire-37543.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" className="inline-block max-h-[512px] w-full object-cover" />
       </div>
-      <img
-        src="https://images.unsplash.com/photo-1536147116438-62679a5e01f2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80"
-        alt="Leafs"
-        className="w-full h-48 object-cover sm:h-screen sm:w-4/12"
-      />
-    </div>
+    </header>
   );
 };
 
@@ -248,12 +238,12 @@ const ProductTypeHeroTwo = () => {
           <div class="relative mx-auto flex w-full max-w-[1120px] flex-col items-start px-5 py-16 md:px-10 md:py-24 lg:py-32">
             
             <div class="lg:max-w-[80%]">
-              <h1 class="mb-5 text-4xl font-semibold md:text-8xl lg:mb-8">The Website You Want Without The <span class="bg-cover bg-center bg-no-repeat px-4 text-white" style={{ backgroundImage: "url('https://assets.website-files.com/63904f663019b0d8edf8d57c/6390526ac2a607693620c97b_Rectangle%2010.svg')"}} >Dev Time</span>.</h1>
+              <h1 class="mb-5 text-4xl font-semibold md:text-6xl  lg:mb-8">The Website You Want Without The <span class="bg-cover bg-center bg-no-repeat px-4 text-white" style={{ backgroundImage: "url('https://assets.website-files.com/63904f663019b0d8edf8d57c/6390526ac2a607693620c97b_Rectangle%2010.svg')"}} >Dev Time</span>.</h1>
               <p class="mb-5 max-w-[528px] text-xl text-[#636262] lg:mb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus</p>
             </div>
           
             <div class="flex">
-            <InnerButton text="Explore Now" link="/categories/women" />
+            <Button text="Explore Now" link="/categories/women" />
             
     
             </div>

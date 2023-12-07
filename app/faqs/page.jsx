@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Button from "../components/button/InnerCTA.jsx"
 
 export default function FAQs(){
 
@@ -44,25 +45,24 @@ export default function FAQs(){
 		        </div>
 		      </div>
 		    </div>
-		    <div className="mb-6 mt-8 h-[0.5px] w-full bg-[#a6a6a6]"></div>
-		    <Link href="#" className="inline-block items-center px-6 py-3 text-center font-semibold dark:bg-black bg-blue-500 text-white">Get In Touch</Link>
+		    <hr className="mb-6 mt-8 h-[0.5px] w-full bg-[#a6a6a6]" />
+        <div className="w-[57%] self-center">
+          <Button text="Get in touch" link="contact-us"/>
+        </div>
+		    
 		  </div>
 	</div>
     
       <div class="flex-[1_1_500px] max-[991px]:w-full max-[991px]:flex-none">
     
-    { questionsAnswers.map((item,index) => {return( <div class="mb-6 w-full overflow-hidden bg-[#f2f2f7] p-8 rounded-sm dark:bg-gray-900 " key={index}>
-          <div class="flex cursor-pointer items-start justify-between">
-            <p class="text-xl font-bold py-4">{item.question}</p>
-            <div class="relative ml-10 mt-1 flex h-5 w-5 items-center justify-center">
-              <div class="absolute h-5 w-0.5 bg-[#0b0b1f] dark:bg-[#fff]" ></div>
-              <div class="h-0.5 w-5 bg-[#0b0b1f] dark:bg-[#fff]"></div>
-            </div>
-          </div>
-          <div class="w-full overflow-hidden mb-4 max-w-[640px] lg:max-w-[960px]">
-            <p class="max-[479px]:text-sm">{item.answer}</p>
-          </div>
-        </div>)}
+    { questionsAnswers.map((item,index) => {return(
+         <div class="mb-6 w-full overflow-hidden bg-[#f2f2f7] p-8 rounded-sm dark:bg-gray-900 transition-opacity duration-300 ease-in-out" key={index}>
+  <details class="flex cursor-pointer items-start justify-between">
+    <summary class="text-xl font-bold py-4">{item.question}</summary>
+    <p class="max-[479px]:text-sm px-8">{item.answer}</p>
+  </details>
+</div>
+)}
          )}
 
       {/*  <div class="mb-6 w-full overflow-hidden bg-[#f2f2f7] p-8 rounded-sm">
