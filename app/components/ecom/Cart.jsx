@@ -40,7 +40,7 @@ const deleteItem = (index) => {
 
 
 	return (
-		<div class="bg-gray-100 dark:bg-gray-900 w-screen h-screen py-8">
+		<div class="bg-opacity-0 w-screen h-screen py-8">
 		    <div class="container mx-auto px-4">
 		        <h1 class="text-2xl font-semibold mb-4">Shopping Cart</h1>
 		        <div class="flex flex-col md:flex-row gap-4">

@@ -8,7 +8,7 @@ import { useState,useEffect } from 'react';
 import Link from "next/link";
 import Secondary from "./button/AltCTA.jsx"
 import { CategoryLink, SubCategoryLink } from './CategoryLink.jsx';
-
+import Search from "./Search.jsx"
 
 
 const PNavbar = () => {
@@ -105,22 +105,28 @@ const PNavbar = () => {
 				    </div>
 
 		          </div>
-		          <Link href="/categories" className="font-inter rounded-lg lg:px-6 lg:py-4 hover:text-yellow-500">Categories</Link>
-		          <Link href="/services" className="font-inter rounded-lg lg:px-6 lg:py-4 hover:text-yellow-500">Services</Link>
-		          <Link href="/blog" className="font-inter rounded-lg lg:px-6 lg:py-4 hover:text-yellow-500">Blog</Link>
-		          <Link href="/faqs" className="font-inter lg: rounded-lg pb-8 lg:px-6 lg:py-4 hover:text-yellow-500">FAQs</Link>
+		          <Link href="/categories" className="rounded-lg lg:px-6 lg:py-4 hover:text-yellow-500">Categories</Link>
+		          <Link href="/services" className=" rounded-lg lg:px-6 lg:py-4 hover:text-yellow-500">Services</Link>
+		          <Link href="/blog" className=" rounded-lg lg:px-6 lg:py-4 hover:text-yellow-500">Blog</Link>
+		          <Link href="/faqs" className=" lg: rounded-lg pb-8 lg:px-6 lg:py-4 hover:text-yellow-500">FAQs</Link>
 		         
 		          <ThemeSwithcher  />
 		                                
 		        </div>
 		        {/* MENU CONTENT 2 */}
-		        <div className={`flex flex-col space-y-8 lg:flex lg:flex-row lg:space-x-3 lg:space-y-0 ${isOpen ? 'show' : 'hidden'}`}>
-		           <button>		          	
+		        <div className={`flex flex-col space-y-8 lg:flex lg:flex-row lg:space-x-3 lg:space-y-0 justify-evenly gap-2 ${isOpen ? 'show' : 'hidden'}`}>
+		           <Link href="search" className="flex flex-col justify-center cursor-pointer">		          	
 		          	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-6 h-6 font-bold">
 								  <path fillRule="evenodd" d="M9 3.5a5.5 5.5 0 100 11 5.5 5.5 0 000-11zM2 9a7 7 0 1112.452 4.391l3.328 3.329a.75.75 0 11-1.06 1.06l-3.329-3.328A7 7 0 012 9z" clipRule="evenodd" />
 								</svg>
 
-		          </button>
+		          </Link>
+		          <Link href="/cart" className="flex flex-col justify-center cursor-pointer" >
+		          	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
+								  <path fillRule="evenodd" d="M7.5 6v.75H5.513c-.96 0-1.764.724-1.865 1.679l-1.263 12A1.875 1.875 0 004.25 22.5h15.5a1.875 1.875 0 001.865-2.071l-1.263-12a1.875 1.875 0 00-1.865-1.679H16.5V6a4.5 4.5 0 10-9 0zM12 3a3 3 0 00-3 3v.75h6V6a3 3 0 00-3-3zm-3 8.25a3 3 0 106 0v-.75a.75.75 0 011.5 0v.75a4.5 4.5 0 11-9 0v-.75a.75.75 0 011.5 0v.75z" clipRule="evenodd" />
+								</svg>
+
+		          </Link>
 		          <Link href="sign-up" className="font-inter rounded-lg lg:px-6 lg:py-4 hover:text-yellow-500">Sign Up</Link>
 		          <InnerButton text="login" link="/login"/>
 		        </div>
@@ -227,10 +233,13 @@ const Navbar = () => {
 		                                </span>
 		                            </button>
 		                            <InnerButton text="Join" link="/sign-up"/>
+
+		                            
 		                        </div>
 		                    </div>
 		                </div>
 		            </div>
+
 		        </nav>
                                     
 		);
@@ -350,7 +359,7 @@ const MegaMenu = () => {
 					    <ul class="flex border-1 border-gray-200 border-solid flex-row justify-around ">
 							{
 								menuTabcontent.map( (content,index) => (
-										<li class="mr-2" onClick={(e) => adjuctActiveTab(e,index)}>
+										<li class="mr-2" onClick={(e) => adjuctActiveTab(e,index)} key={index}>
 								            <span className={content.active ? active_tailwind_code+"cursor-pointer" : not_active_tailwind_code+"cursor-pointer"}>
 								               	{content.name}
 								            </span>
