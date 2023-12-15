@@ -97,6 +97,37 @@ const fetchSingleCategory = async  (categoryId) => {
   }
 }
 
+const fetchFaqs = async () => {
+  try {
+    // Construct the URL for fetching FAQs
+    const url = 'http://localhost:1337/api/faqs';
+
+    // Make a GET request to the FAQs API endpoint
+    const res = await fetch(url, {
+      method: 'GET',
+      headers: {
+        'Cache-Control': 'public, max-age=3600', // Set caching duration to 1 hour
+      },
+      next: {
+        revalidate: 3600, // Revalidate at most every hour
+        tags: ['faqs'], // Cache tag for on-demand revalidation
+      },
+    });
+
+    // Check if the response is successful
+    if (!res.ok) {
+      throw new Error('Failed to fetch FAQs data');
+    }
+
+    // Parse the JSON response and return the data
+    return res.json();
+  } catch (error) {
+    // Handle any errors during the fetch operation
+    throw new Error(`Error fetching FAQs data: ${error.message}`);
+    return false
+  }
+};
 
 
-export {fetchCategories,fetchSingleCategory,fetchCategoriesAll}
+
+export {fetchCategories,fetchSingleCategory,fetchCategoriesAll,fetchFaqs}

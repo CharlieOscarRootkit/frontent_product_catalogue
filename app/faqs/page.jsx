@@ -1,26 +1,28 @@
 import Link from "next/link"
 import Button from "../components/button/InnerCTA.jsx"
+import {fetchFaqs} from "../../utils/strapi.js"
 
-export default function FAQs(){
+export default async function FAQs(){
 
-	const questionsAnswers = [
-	{
-		question:"What is your policy on distributon",
-		answer:"Pellentesque in nisi aliquet, pellentesque purus eget, imperdiet turpis. Fusce at enim quis neque viverra convallis. Vivamus ut elementum leo, eget tempus nisl. Sed viverra enim ac turpis posuere consectetur. Sed enim nibh, consequat vitae lacus eu, ullamcorper ullamcorper massa. Pellentesque purus eget, imperdiet turpis."
-	},
-	{
-		question:"How can I contribute to Flowspark?",
-		answer:"Pellentesque in nisi aliquet, pellentesque purus eget, imperdiet turpis. Fusce at enim quis neque viverra convallis. Vivamus ut elementum leo, eget tempus nisl. Sed viverra enim ac turpis posuere consectetur. Sed enim nibh, consequat vitae lacus eu, ullamcorper ullamcorper massa. Pellentesque purus eget, imperdiet turpis."
-	},
-	{
+   console.log("fetching faqs")
+   let faqs = await fetchFaqs();
+    
 
-		question:"What other themes do you have?",
-		answer:"Pellentesque in nisi aliquet, pellentesque purus eget, imperdiet turpis. Fusce at enim quis neque viverra convallis. Vivamus ut elementum leo, eget tempus nisl. Sed viverra enim ac turpis posuere consectetur. Sed enim nibh, consequat vitae lacus eu, ullamcorper ullamcorper massa. Pellentesque purus eget, imperdiet turpis."
-	},{
-		question:"What is your policy on distributon",
-		answer:"Pellentesque in nisi aliquet, pellentesque purus eget, imperdiet turpis. Fusce at enim quis neque viverra convallis. Vivamus ut elementum leo, eget tempus nisl. Sed viverra enim ac turpis posuere consectetur. Sed enim nibh, consequat vitae lacus eu, ullamcorper ullamcorper massa. Pellentesque purus eget, imperdiet turpis."
-	}
-	]
+
+    if (faqs == false){
+      return null; // Return null or handle the error as needed
+    }
+
+    faqs = faqs.data.map((faq) => {
+      return {
+        question : faq.attributes.question,
+        answer : faq.attributes.answer
+      }
+    })
+
+    console.log(faqs);
+
+	const questionsAnswers = faqs
 	return (
 
 <main className="dark:bg-gray-900/80">
